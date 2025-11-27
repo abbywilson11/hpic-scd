@@ -7,6 +7,11 @@ import { API_BASE_URL } from "../../../apiConfig"; // Importing base URL for API
 export default function Education({ language }) {
   // PDF filenames remain the same because they already include both
   // EN and FR versions. We only translate how they DISPLAY on buttons.
+  useEffect(() => {
+      fetch(`${API_BASE_URL}/api`)
+        .then((res) => res.json())
+        .catch((err) => console.error("Error fetching data:", err));
+    }, []);
   const brochures = [
     "ChildrenWithSCD-EN.pdf",
     "QualityStandard-EN.pdf",

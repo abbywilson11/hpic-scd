@@ -76,6 +76,7 @@ export default function InfoSection({ language }) {
         </Link>
 
         {/* Each card links to its respective page using the same format */}
+        
         <Link to="/TreatmentOptions" className="info-card-link">
           <div className="info-card">
             <div className="info-icon"><MdLocalHospital /></div>
