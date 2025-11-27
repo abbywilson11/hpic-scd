@@ -1,0 +1,131 @@
+/* Reuse dark background like login */
+.signup-page {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1f2933;
+}
+
+/* Slightly wider card for multi-step form */
+.signup-card {
+  width: 420px;
+}
+
+/* Progress indicator at top of card */
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.step {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 2px solid #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  background: #f9fafb;
+}
+
+.step.active {
+  border-color: #2f8f6e;
+  background: #2f8f6e;
+  color: #ffffff;
+}
+
+.bar {
+  flex: 1;
+  height: 2px;
+  margin: 0 8px;
+  background: #e5e7eb;
+}
+
+.bar.active {
+  background: linear-gradient(to right, #2f8f6e, #22c55e);
+}
+
+/* Inline radio buttons */
+.inline-radio {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.inline-radio label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+/* Error message */
+.error-text {
+  margin: 0;
+  font-size: 12px;
+  color: #b91c1c;
+}
+
+/* Button row for back + submit */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.secondary-btn {
+  width: 40%;
+  padding: 10px 0;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background: #f3f4f6;
+}
+
+.primary-btn {
+  width: 60%;
+}
+
+/* Make selects look like inputs */
+select {
+  width: 100%;
+  padding: 10px 11px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+
+select:focus {
+  border-color: #2f8f6e;
+  box-shadow: 0 0 0 2px rgba(47, 143, 110, 0.25);
+  outline: none;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .signup-card {
+    width: 92%;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .secondary-btn,
+  .primary-btn {
+    width: 100%;
+  }
+}
