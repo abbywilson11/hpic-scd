@@ -1,0 +1,114 @@
+/* Full-page background under navbar/footer */
+.login-page {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1f2933; /* dark grey */
+}
+
+/* Shared card style (also used by signup) */
+.auth-card {
+  width: 380px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 26px 24px;
+  box-shadow: rgba(15, 23, 42, 0.25) 0px 18px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Header text */
+.auth-header h1 {
+  font-size: 24px;
+  margin: 0 0 4px;
+  color: #111827;
+}
+
+.auth-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Form layout */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px 11px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.auth-form input:focus {
+  border-color: #2f8f6e; /* HPIC green */
+  box-shadow: 0 0 0 2px rgba(47, 143, 110, 0.25);
+  outline: none;
+}
+
+/* Primary green button */
+.primary-btn {
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px 0;
+  background: #2f8f6e;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.08s ease;
+}
+
+.primary-btn:hover {
+  background: #25735a;
+}
+
+.primary-btn:active {
+  transform: scale(0.98);
+}
+
+/* Footer text under button */
+.auth-footer-text {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* Reusable link style */
+.link {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .auth-card {
+    width: 92%;
+    padding: 22px 18px 20px;
+  }
+}
