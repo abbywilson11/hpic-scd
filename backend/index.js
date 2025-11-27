@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
+import fs from "fs";
 
 const app = express();
 
@@ -28,18 +29,20 @@ app.get("/api/health", (req, res) => {
 app.get("/api/hospitals", (req, res) => {
   res.json({ message: "List of hospitals goes here" });
 });
-
 // Serve brochures from /backend/brochures
-app.get("/api/brochures/:fileName", (req, res) => {
-  const filePath = path.join(__dirname, "brochures", req.params.fileName);
-
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      console.error("Error sending brochure:", err);
-      return res.status(404).json({ message: "Brochure not found" });
-    }
-  });
-});
+app.use(
+  "/api/brochures",
+  express.static(path.join(__dirname, "brochures"))
+);
+console.log("DEBUG __dirname:", __dirname);
+console.log("DEBUG process.cwd():", process.cwd());
+console.log(
+  "DEBUG brochure folder exists:",
+  fs.existsSync(path.join(__dirname, "brochures"))
+);
+console.log("DEBUG brochure folder path:", 
+  path.join(__dirname, "brochures")
+);
 
 // Use Render’s PORT or default to 5000 locally
 const PORT = process.env.PORT || 5000;
