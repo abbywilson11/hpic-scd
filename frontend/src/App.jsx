@@ -4,7 +4,7 @@ import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 import Home from "./pages/HomePage/Home";
 import ScrollToTop from "./ScrollToTop";
-
+import Signup from "./pages/Signup";
 // Navbar buttons imported separately
 import MyJournal from "./Navbar/buttons/MyJournal";
 import Language from "./Navbar/buttons/Language";
