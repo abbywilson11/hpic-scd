@@ -1,5 +1,5 @@
 import React from "react";
-import "./earlyDetection.css";
+import "./EarlyDetection.css";
 
 // importing images
 import eyes from "../../../assets/jaundice.png";
