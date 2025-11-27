@@ -1,31 +1,55 @@
-// adding .jsx file for error handlign when user clicks on it but we dont have anything written yet
-import React from "react";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./Login.css";
 
-export default function Login({ language }) {
-  // Bilingual text
-  const text = {
-    en: {
-      title: "Login / Sign Up",
-      subtitle: "Welcome to the HPIC access portal.",
-      description:
-        "This page is a placeholder for the future login and authentication system.",
-    },
-    fr: {
-      title: "Connexion / Inscription",
-      subtitle: "Bienvenue sur le portail d’accès de HPIC.",
-      description:
-        "Cette page sert de modèle pour le futur système de connexion et d’authentification.",
-    },
+export default function Login() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        localStorage.setItem("token", data.token);
+        alert("Login successful!");
+        navigate("/myjournal");
+      } else {
+        alert(data.message || "Invalid login");
+      }
+    } catch (error) {
+      alert("Server error. Try later.");
+    }
   };
 
-  // Gets text in correct language (defaults to EN)
-  const t = text[language] || text.en;
-
   return (
-    <div className="login-container">
-      <h1>{t.title}</h1>
-      <p>{t.subtitle}</p>
-      <p>{t.description}</p>
-    </div>
+    <form className="login-container" onSubmit={handleLogin}>
+      <h1>Sign In</h1>
+      <input
+        type="email"
+        placeholder="Email Address"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button type="submit">Sign In</button>
+      <p>
+        Don't have an account? <Link to="/signup">Create one</Link>
+      </p>
+    </form>
   );
 }
