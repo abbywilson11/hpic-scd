@@ -1,3 +1,5 @@
+// footer is just for show! the links do not work and the info is placeholder
+
 import React from "react";
 import "./Footer.css";
 
