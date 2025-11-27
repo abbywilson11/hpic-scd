@@ -67,6 +67,12 @@ function App() {
               element={<Login language={language} />}
             />
 
+            {/* 🚀 Signup route added here */}
+            <Route
+              path="/signup"
+              element={<Signup language={language} />}
+            />
+
           </Routes>
         </div>
 
