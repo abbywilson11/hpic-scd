@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Education.css";
 import { API_BASE_URL } from "../../../apiConfig"; // Importing base URL for API from backend for rendering
 
