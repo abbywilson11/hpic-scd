@@ -70,7 +70,7 @@ export default function InfoSection({ language }) {
         <Link to="/EarlyDetection" className="info-card-link"> {/* Link to Early Detection page */}
           <div className="info-card">
             <div className="info-icon"><MdHealthAndSafety /></div> {/* Icon */}
-            <h3>{t.card1Title}</h3>
+            <h3>{t.card1Title}</h3> {/* Card Title */}
             <p>{t.card1Body}</p>
           </div>
         </Link>

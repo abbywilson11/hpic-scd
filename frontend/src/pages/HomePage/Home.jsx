@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import ribbon from "../../assets/Ribbon.jpg";
+
 // importing info and statistics for home page components
 import InfoSection from "../InformationSection/InfoSection";
 import StatisticsSection from "../StatisticsSection/statistics";
@@ -38,8 +39,8 @@ export default function Home({ language }) {
           <p>{t.p3}</p>
         </div>
 
-        <div className="hero-image">
-          <img src={ribbon} alt="Awareness Ribbon" />
+        <div className="hero-image"> {/* importing image beside text */}
+          <img src={ribbon} alt="Awareness Ribbon" /> 
         </div>
       </section>
 

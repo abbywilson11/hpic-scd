@@ -351,7 +351,7 @@ export default function MyJournal({ language }) {
   //  Centralized here so the logic below stays the same
   //  and only the text changes based on "language".
   // =========================================
-  const text = {
+  const text = { 
     en: {
       title: "Symptom Journal",
       errorRequired: "Please enter a date and symptom.",
@@ -398,10 +398,10 @@ export default function MyJournal({ language }) {
     },
   };
 
-  const t = text[language] || text.en;
+  const t = text[language] || text.en; // Fallback to English if language not found
 
   useEffect(() => {
-    const saved = localStorage.getItem("journalEntries");
+    const saved = localStorage.getItem("journalEntries"); // Load stored entries on first render
     if (saved) setEntries(JSON.parse(saved));
     setLoaded(true);
   }, []);
@@ -413,7 +413,7 @@ export default function MyJournal({ language }) {
   }, [entries, loaded]);
 
   const updateField = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target; // Update form field values
     setForm((prev) => ({ ...prev, [name]: value }));
     setError("");
   };

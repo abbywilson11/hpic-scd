@@ -27,13 +27,13 @@ export default function Navbar({ language, setLanguage }) {
   return (
     <nav className="navbar">
       {/* Left: Logo */}
-      <div className="navbar-left">
+      <div className="navbar-left"> {/* Clicking logo navigates to Home */}
         <img
           src={logo}
           alt="HPIC Logo"
           className="logo"
-          onClick={() => navigate("/Home")}
-          style={{ cursor: "pointer" }}
+          onClick={() => navigate("/Home")} // Navigate to Home on click
+          style={{ cursor: "pointer" }} // show pointer cursor on hover
         />
       </div>
 
