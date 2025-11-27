@@ -1,0 +1,200 @@
+/* ✅ FULL-PAGE WRAPPER — mint background */
+.page-wrapper {
+  width: 100%;
+  background-color: #e0f7f4;
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ MAIN CONTENT WIDTH — same as Treatment */
+.page-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ✅ PAGE TITLE — identical style */
+.page-title {
+  background-color: #ffffff;
+  color: #d62828;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  padding: 18px 0;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ✅ WHITE CONTENT BLOCKS */
+.section-block {
+  background-color: #ffffff;
+  padding: 28px 30px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ✅ FORM LABELS */
+label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+  color: #009688;
+}
+
+/* ✅ INPUTS, SELECT, TEXTAREA */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #9ec8c0;
+  font-size: 16px;
+  background: #ffffff;
+  color: #222;
+  box-sizing: border-box;
+}
+
+/* 🎯 DATE INPUT COLORS:
+   - grey when empty
+   - black when user has chosen a date */
+.date-input {
+  color: #777;
+}
+
+.date-input.has-value {
+  color: #222;
+}
+
+/* ✅ dropdown arrow + color */
+select {
+  appearance: menulist;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+}
+
+select option {
+  color: #222;
+  background: #ffffff;
+}
+
+/* ✅ Placeholder text */
+input::placeholder,
+textarea::placeholder {
+  color: #777;
+  opacity: 1;
+}
+
+/* ✅ focus state */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #009688;
+  box-shadow: 0 0 4px rgba(0,150,136,0.3);
+}
+
+/* ✅ BUTTONS ROW */
+.journal-buttons {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #009688;
+  color: white;
+}
+
+button:hover {
+  background-color: #00796b;
+}
+
+/* cancel button */
+.cancel {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.cancel:hover {
+  background-color: #f5f5f5;
+}
+
+/* ✅ ENTRIES LIST */
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0e243d;
+}
+
+.journal-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 14px 0;
+}
+
+.journal-item:last-child {
+  border-bottom: none;
+}
+
+/* notes text */
+.note {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* entry buttons */
+.entry-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.delete {
+  background-color: #ca3647;
+}
+
+.delete:hover {
+  background-color: #f7495e;
+}
+
+/* empty state */
+.empty {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+/* error */
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ✅ mobile */
+@media (max-width: 600px) {
+  .page-container {
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .section-block {
+    padding: 20px 18px;
+  }
+}

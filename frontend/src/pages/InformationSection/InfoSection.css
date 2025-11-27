@@ -1,0 +1,80 @@
+/* Info section */
+.info-section {
+  text-align: center;
+  padding: 60px 15%;
+  background-color: #e0f7f4;
+  margin-top: 0px;
+
+}
+
+.info-section h2 {
+  color: #009688;
+  font-size: 36px;
+  background-color: #f9f9f9;
+  width: 100vw;         /* full browser width */
+  margin-left: calc(50% - 50vw);  /* center it by cancelling parent padding */
+  margin-right: calc(50% - 50vw);
+  padding: 10px 0;      /* add vertical space */
+  text-align: center;
+  margin-top: 0px;
+
+}
+
+
+.info-section p {
+  font-size: 17px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+  }
+}
+/* ===== Cards Grid Layout ===== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* ===== Card Style ===== */
+.info-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Icon Style ===== */
+.info-icon {
+  font-size: 40px; /* or replace with svg later */
+  margin-bottom: 15px;
+  color: #ca3647; /* matches your header color */
+}
+
+.info-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #009688;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: #444;
+}

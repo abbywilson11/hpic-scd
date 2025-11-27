@@ -1,0 +1,102 @@
+/* Main container styling */
+.home-container {
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+  margin-bottom: 0px;
+}
+
+/* =============================
+   HERO SECTION (top banner)
+   ============================= */
+.hero {
+  display: flex;                 /* Places text + image side-by-side */
+  align-items: center;           /* Vertically centers them */
+  justify-content: space-between;/* Pushes items to opposite sides */
+  padding: 60px 10%;             /* Space around the whole hero section */
+  background-color: #e0f7f4;     /* Light teal background */
+  flex-wrap: wrap;               /* Allows wrapping on smaller screens */
+  gap: 30px;                     /* Space between wrapped items */
+}
+
+/* Left text content area */
+.hero-content {
+  flex: 1;                       /* Takes available space evenly */
+  min-width: 320px;              /* Prevents text column from shrinking too small */
+}
+
+/* H1 title (responsive font size) */
+.hero-content h1 {
+  font-size: clamp(26px, 4vw, 36px); /* Responsive font: min → ideal → max */
+  text-align: left;
+  color: #ca3647;
+  margin-bottom: 0px;
+}
+
+/* H2 title */
+.hero-content h2 {
+  font-size: clamp(26px, 3.5vw, 34px); /* Adapts to screen width */
+  text-align: left;
+  color: #ca3647;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+/* Paragraph text */
+.hero-content p {
+  font-size: clamp(16px, 2vw, 18px); /* Makes text readable on any device */
+  text-align: left;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Right side image container */
+.hero-image {
+  flex: 1;                           /* Shares space with text */
+  text-align: right;                 /* Aligns image to the right on desktop */
+  min-width: 260px;                  /* Prevents image from shrinking too small */
+}
+
+/* Ribbon image */
+.hero-image img {
+  width: 100%;                       /* Makes image scale down safely */
+  max-width: 450px;                  /* Prevents image from getting too large */
+  height: auto;                      /* Keeps natural proportions */
+}
+
+/* =======================================
+   TABLET BREAKPOINT (screens under 900px)
+   ======================================= */
+@media (max-width: 900px) {
+  .hero {
+    padding: 40px 8%;               /* Slightly less padding on tablets */
+  }
+
+  .hero-image {
+    text-align: center;             /* Center image when space tightens */
+  }
+}
+
+/* =======================================
+   MOBILE BREAKPOINT (screens under 600px)
+   ======================================= */
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;         /* Stacks image below text */
+    padding: 30px 6%;               /* More compact padding */
+  }
+
+  .hero-content {
+    text-align: center;             /* Centers text on small screens */
+  }
+
+  /* Center all text elements */
+  .hero-content h1,
+  .hero-content h2,
+  .hero-content p {
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 300px;               /* Reduces image size for smaller screens */
+  }
+}

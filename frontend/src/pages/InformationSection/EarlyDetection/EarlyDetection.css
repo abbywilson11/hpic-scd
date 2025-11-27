@@ -1,0 +1,105 @@
+/* ✅ FULL PAGE BACKGROUND — spans entire screen */
+.page-wrapper {
+  width: 100%;
+  background-color: #e0f7f4; /* mint */
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ MAIN CONTENT WIDTH — consistent across website */
+.page-container {
+  max-width: 900px; /* 👈 matches Treatment + Journal */
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ✅ PAGE TITLE — identical styling */
+.page-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  padding: 18px 0;
+  background: #ffffff;
+  color: #d62828; /* same red title as Home/Treatment */
+  border-radius: 10px;
+  margin-bottom: 35px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ✅ WHITE CARD SECTIONS — consistent with other pages */
+.section-block {
+  background: #ffffff;
+  padding: 28px 30px;
+  margin-bottom: 28px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ✅ Subsection Titles */
+.section-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #0e243d;
+  font-weight: 600;
+}
+
+/* ✅ Symptom Grid Layout */
+/* List container */
+.symptom-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Each row */
+.symptom-row {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* FIXED image size — consistent across all your files */
+.symptom-icon {
+  width: 90px;         /* exact size like mockup */
+  height: 90px;
+  object-fit: cover;   /* keeps proportions correct */
+  border-radius: 10px; /* optional, looks nicer for JPGs */
+  flex-shrink: 0;      /* NEVER let image shrink */
+}
+
+/* Titles + description */
+.symptom-info h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0c2f34;
+}
+
+.symptom-info p {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* ✅ MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .page-container {
+    margin: 20px auto;
+    padding: 0 14px;
+  }
+
+  .page-title {
+    font-size: 30px;
+  }
+
+  .symptom-grid {
+    grid-template-columns: 1fr;
+  }
+}

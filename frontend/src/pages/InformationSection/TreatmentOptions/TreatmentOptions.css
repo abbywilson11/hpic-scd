@@ -1,0 +1,106 @@
+/* ================================
+   FULL-PAGE BACKGROUND WRAPPER
+================================ */
+.page-wrapper {
+  width: 100%;
+  background-color: #e0f7f4; /* mint */
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* ================================
+   MAIN CONTENT CONTAINER
+================================ */
+.page-container {
+  max-width: 1000px; /* matches Early Detection */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ================================
+   PAGE TITLE
+================================ */
+.page-title {
+  background-color: #ffffff;
+  color: #009688;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  padding: 18px 0;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-top: 1px;
+}
+
+.page-subtitle {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* ================================
+   REUSABLE WHITE SECTION BLOCK
+================================ */
+.section-block {
+  background-color: #ffffff;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.section-block h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  color: #009688;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.subheading {
+  color: #00796b;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+/* ================================
+   LIST SPACING
+================================ */
+.section-block ul li {
+  margin-bottom: 6px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .page-container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .section-block {
+    padding: 22px;
+  }
+
+  .page-title {
+    font-size: 30px;
+  }
+}
+/* Ensure body text is left aligned */
+.section-block p,
+.section-block li,
+.section-block ul,
+.section-block h4 {
+  text-align: left !important;
+}

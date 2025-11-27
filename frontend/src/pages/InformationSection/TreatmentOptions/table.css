@@ -1,0 +1,124 @@
+/* ===================================================
+   HOSPITAL FINDER (Hospital Table) STYLES
+   =================================================== */
+
+/* ✅ Outer wrapper – NO card styling, so it blends into section-block */
+.table-container {
+  max-width: 900px;   /* match Treatment section width */
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;         /* let .section-block control padding */
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Title under section-block card */
+.table-container h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ca3647;   /* red like other headings */
+}
+
+/* Subtext */
+.table-container > p {
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  text-align: center !important;
+}
+
+/* ================================
+   Search + Input Row
+   ================================ */
+
+.search-box {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 60%;             /* nice wide input */
+  max-width: 450px;
+  border: 1px solid #cfe7e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.search-box button {
+  padding: 10px 16px;
+  border: none;
+  background-color: #009688;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.search-box button:hover {
+  background-color: #00796b;
+}
+
+/* Make the Reset button look softer if you used .reset-btn */
+.reset-btn {
+  background-color: #ffffff;
+  color: #009688;
+  border: 1px solid #009688;
+}
+
+.reset-btn:hover {
+  background-color: #e0f7f4;
+}
+
+/* ================================
+   Messages (loading / errors / empty)
+   ================================ */
+
+.helper {
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+/* Stronger selector so global styles can't override */
+.table-container .error {
+  color: red !important;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+/* ================================
+   Table styling
+   ================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f7fafc;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
