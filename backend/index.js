@@ -14,9 +14,16 @@ const __dirname = path.dirname(__filename);
 // CORS: allow your frontend origin (we’ll set CORS_ORIGIN on Render)
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || "*",
+    origin: [
+      process.env.CORS_ORIGIN,          // your Render frontend
+      "http://localhost:5173",          // local vite dev
+      "http://localhost:3000",          // alt local dev
+      "http://127.0.0.1:5173",
+      "http://127.0.0.1:3000"
+    ].filter(Boolean),
   })
 );
+
 
 app.use(express.json());
 

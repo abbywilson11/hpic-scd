@@ -7,11 +7,12 @@ import { API_BASE_URL } from "../../../apiConfig"; // Importing base URL for API
 export default function Education({ language }) {
   // PDF filenames remain the same because they already include both
   // EN and FR versions. We only translate how they DISPLAY on buttons.
-  useEffect(() => {
-      fetch(`${API_BASE_URL}/api`)
-        .then((res) => res.json())
-        .catch((err) => console.error("Error fetching data:", err));
-    }, []);
+ useEffect(() => {
+  fetch(`${API_BASE_URL}/api/health`)
+    .then((res) => res.json())
+    .catch((err) => console.error("Error fetching data:", err));
+}, []);
+
   const brochures = [
     "ChildrenWithSCD-EN.pdf",
     "QualityStandard-EN.pdf",
@@ -23,12 +24,15 @@ export default function Education({ language }) {
 
   // Fetches a selected PDF from the backend and opens it in a new tab.
   // This part remains unchanged.
-  const openBrochure = async (fileName) => {
-  const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/brochures/${fileName}`);
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    window.open(url, "_blank");
-  };
+const openBrochure = async (fileName) => {
+  console.log("BROCHURE URL:", `${API_BASE_URL}/api/brochures/${fileName}`);
+
+  const response = await fetch(`${API_BASE_URL}/api/brochures/${fileName}`);
+  const blob = await response.blob();
+  const url = URL.createObjectURL(blob);
+  window.open(url, "_blank");
+};
+
 
   // ============================================
   //  BILINGUAL TEXT CONTENT (EN + FR)
